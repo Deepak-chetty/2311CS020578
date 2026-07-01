@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div>
+        <h1>Evaluation Notifications</h1>
+        <p class="subtitle">Real-time alerts</p>
+      </div>
+      <div>
+        <button id="refresh-btn" class="btn">Refresh</button>
+      </div>
+    </header>
+
+    <main class="app-content">
+      <!-- Notifications Feed -->
+      <section class="feed-section">
+        <!-- Loading State -->
+        <div id="loading-state" class="state-container">
+          <p>Fetching notifications...</p>
+        </div>
+
+        <!-- Error State -->
+        <div id="error-state" class="state-container hidden">
+          <h3>Failed to Load</h3>
+          <p id="error-message">Something went wrong while fetching notifications.</p>
+          <button id="retry-btn" class="btn btn-primary">Retry</button>
+        </div>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="state-container hidden">
+          <h3>No Notifications Found</h3>
+        </div>
+
+        <!-- Cards Grid -->
+        <div id="notifications-grid" class="notifications-grid hidden">
+          <!-- Dynamically inserted notifications -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

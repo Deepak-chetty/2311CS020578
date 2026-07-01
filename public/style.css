@@ -1,0 +1,191 @@
+/* Basic White HTML-based CSS */
+:root {
+  --font-family: 'Times New Roman', Times, serif;
+  --bg-color: #ffffff;
+  --bg-container: #f9fafb;
+  --border-color: #d1d5db;
+  --text-color: #111827;
+  --text-muted: #4b5563;
+  --text-light: #6b7280;
+  
+  /* Accent/Category colors (muted tones for white theme) */
+  --placement-color: #0b57d0; /* Soft Blue */
+  --placement-bg: #e8f0fe;
+  
+  --event-color: #681da8; /* Soft Purple */
+  --event-bg: #f3e8fd;
+  
+  --result-color: #137333; /* Soft Green */
+  --result-bg: #e6f4ea;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 20px;
+  line-height: 1.4;
+}
+
+.app-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #eaeaea;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+header .subtitle {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* Buttons */
+.btn {
+  font-family: inherit;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  background-color: #f3f4f6;
+  color: var(--text-color);
+}
+
+.btn:hover {
+  background-color: #e5e7eb;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+  border-color: #1d4ed8;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+/* States */
+.state-container {
+  padding: 30px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--bg-container);
+  margin-top: 10px;
+}
+
+.state-container.hidden {
+  display: none;
+}
+
+.state-container h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.state-container p {
+  color: var(--text-light);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+/* Notifications Feed */
+.notifications-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.notifications-grid.hidden {
+  display: none;
+}
+
+/* Card */
+.notification-card {
+  display: flex;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.notification-card:hover {
+  border-color: #9ca3af;
+}
+
+.card-details {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.type-badge {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+/* Badge colors for white theme */
+.type-placement .type-badge {
+  background-color: var(--placement-bg);
+  color: var(--placement-color);
+}
+.type-event .type-badge {
+  background-color: var(--event-bg);
+  color: var(--event-color);
+}
+.type-result .type-badge {
+  background-color: var(--result-bg);
+  color: var(--result-color);
+}
+
+.card-timestamp {
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.card-message {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.card-footer-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-id {
+  font-size: 14px;
+  color: var(--text-light);
+  font-family: monospace;
+}
